@@ -1,0 +1,7 @@
+Django
+django-cors-headers
+django-rest-swagger==2.2.0
+djangorestframework==3.9.2
+redis
+itsdangerous
+mysqlclient

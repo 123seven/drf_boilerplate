@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import path, include
-from rest_framework.schemas import get_schema_view
-from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
+from rest_framework_swagger.views import get_swagger_view
 
-swagger_view = get_schema_view(title='sunflower_backend', renderer_classes=[SwaggerUIRenderer, OpenAPIRenderer, ])
+swagger_view = get_swagger_view(title='backend_api')
+
 urlpatterns = [
     path('docs/', swagger_view),
     path('admin/', admin.site.urls),
